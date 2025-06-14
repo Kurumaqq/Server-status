@@ -3,7 +3,7 @@ import psutil
 class Server():
     @property
     def cpu_used(self):
-        return psutil.cpu_percent(interval=1)
+        return psutil.cpu_percent(interval=3)
 
     @property
     def memory_used(self):
