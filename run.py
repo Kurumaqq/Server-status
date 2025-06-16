@@ -1,11 +1,10 @@
 from aiogram import Bot, Dispatcher
-from dotenv import load_dotenv
-from os import getenv
-import asyncio
 from src.route import main_router
+from src.config import Config
+import asyncio
 
-load_dotenv()
-bot = Bot(getenv('TOKEN'))
+config = Config()
+bot = Bot(config.token)
 dp = Dispatcher()
 
 async def start_bot(): 
